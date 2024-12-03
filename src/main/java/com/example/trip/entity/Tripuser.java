@@ -26,7 +26,7 @@ public class Tripuser extends BaseEntity {
     @Column(nullable = false)
     private String name;   // 회원 이름
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private String password; //회원 비밀번호
 
     private String address;  // 주소

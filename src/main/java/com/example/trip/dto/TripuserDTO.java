@@ -5,6 +5,7 @@ import com.example.trip.entity.base.BaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.springframework.data.annotation.CreatedBy;
@@ -37,9 +38,13 @@ public class TripuserDTO {
     @Size(min = 8, max = 20)
     private String password; //회원 비밀번호
 
+    @NotBlank
+    @Size(min = 8, max = 20)
+    private String password2; //회원 비밀번호
+
     private String address;  // 주소
 
-    @NotBlank
+    @NotNull
     private Role role;  //  회원 권한
 
     private LocalDateTime regDate;	 //	작성 시간

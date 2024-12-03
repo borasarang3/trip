@@ -18,7 +18,7 @@ public class Information extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "information_id")
-    private String id;  //여행 정보 글번호
+    private Long id;  //여행 정보 글번호
 
     @Column(nullable = false)
     private String	category;	// 카테고리

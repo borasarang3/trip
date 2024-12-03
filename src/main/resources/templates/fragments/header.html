@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+</head>
+<body>
+
+<th:block th:fragment="header">
+
+    <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" href="/">Navbar</a>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tripcourse/list">여행 코스</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tripreview/list">여행 후기</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/tripinformation/list" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        여행 정보
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">여행지</a></li>
+                        <li><a class="dropdown-item" href="#">축제</a></li>
+                        <li><a class="dropdown-item" href="#">공연/행사</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0 me-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="/tripuser/login">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tripuser/terms">회원가입</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/mypage" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        마이 페이지
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/mypage">내 정보보기</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/admin/tripuserList">관리자 페이지</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">여행 코스 작성</a></li>
+                        <li><a class="dropdown-item" href="/tripreview/register">여행 후기 작성</a></li>
+                        <li><a class="dropdown-item" href="/tripinformation/register">여행 정보 작성</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/tripuser/logout">로그아웃</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+</th:block>
+
+</body>
+</html>
